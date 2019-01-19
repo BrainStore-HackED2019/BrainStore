@@ -1,25 +1,16 @@
 {
   "name": "brainstore",
-  "version": "1.0.0",
-  "description": "A platform to share and build ideas ",
-  "main": "app.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrainStore-HackED2019/BrainStore.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrainStore-HackED2019/BrainStore/issues"
-  },
-  "homepage": "https://github.com/BrainStore-HackED2019/BrainStore#readme",
   "dependencies": {
-    "@angular/cli": "^7.2.2",
-    "express": "^4.16.4",
-    "mongodb": "^3.1.12",
-    "mongoose": "^5.4.5"
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0"
   }
 }
