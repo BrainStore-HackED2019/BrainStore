@@ -1,0 +1,22 @@
+{
+  "name": "brainstore",
+  "version": "1.0.0",
+  "description": "A platform to share and build ideas ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrainStore-HackED2019/BrainStore.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrainStore-HackED2019/BrainStore/issues"
+  },
+  "homepage": "https://github.com/BrainStore-HackED2019/BrainStore#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
