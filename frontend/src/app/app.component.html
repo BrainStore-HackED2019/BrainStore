@@ -6,6 +6,25 @@
   </h1>
 
   <app-idea-form></app-idea-form>
+
+  <br>
+  <br>
+
+  <button (click)="getPosts()" class="btn btn-success">Get</button>
+
+  <br>
+  <br>
+
+  <div *ngFor="let post of posts | async">
+    {{ post | json}}
+  </div>
+  
+  <button (click)="createPost()" class="btn btn-success">Post</button>
+
+  <hr>
+  
+  {{ newPost | async | json }}
+  
   
 </div>
 

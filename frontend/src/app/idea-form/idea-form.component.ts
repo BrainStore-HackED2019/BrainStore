@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Idea } from '../idea';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-idea-form',
@@ -8,7 +9,7 @@ import { Idea } from '../idea';
 })
 export class IdeaFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
 
   idea = new Idea("New idea");
 
@@ -16,7 +17,7 @@ export class IdeaFormComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    
+
   }
 
   ngOnInit() {
