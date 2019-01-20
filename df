@@ -1,0 +1,92 @@
+[33mcommit d31fb59f15af5872f1c8db6cb853eeb04327fbe2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Cody Gramlich <codgra1@COE.ADS>
+Date:   Sat Jan 19 22:20:13 2019 -0700
+
+    Add http post
+
+[33mcommit 739af6ce5a5fefe86a32e23f9f87b0c69778758b[m
+Merge: 7e2785e dac7d65
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 19:04:25 2019 -0700
+
+    Merge pull request #5 from BrainStore-HackED2019/barebones
+    
+    POST request for idea
+
+[33mcommit dac7d656d19bf7b66d26835982c2658a082f5adc[m[33m ([m[1;31morigin/barebones[m[33m)[m
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 19:03:41 2019 -0700
+
+    POST request for idea
+
+[33mcommit 7e2785e7b691c1b207780b7d602d2cb1cfdc6547[m
+Merge: 3855657 a702349
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 17:50:26 2019 -0700
+
+    Merge pull request #4 from BrainStore-HackED2019/barebones
+    
+    Skeleton
+
+[33mcommit a7023497b287e313ff9db4d166c679ce4f0782dd[m
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 17:50:05 2019 -0700
+
+    Skeleton
+
+[33mcommit 38556575a4d5dbfdc472937ad339bf572cd3285c[m
+Merge: 3d20850 e3c06c8
+Author: Cody Gramlich <cmgramli@ualberta.ca>
+Date:   Sat Jan 19 17:14:21 2019 -0700
+
+    Merge pull request #3 from BrainStore-HackED2019/frontend
+    
+    Initial frontend
+
+[33mcommit e3c06c86aa9d18e752a886055476851a046a7777[m[33m ([m[1;31morigin/frontend[m[33m)[m
+Author: Cody Gramlich <codgra1@COE.ADS>
+Date:   Sat Jan 19 17:13:18 2019 -0700
+
+    Initial frontend
+
+[33mcommit 3d20850d82e6567440ce2f85f9739310f0a380bb[m
+Merge: 1c2fb05 61b225d
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 13:57:47 2019 -0700
+
+    Merge pull request #2 from BrainStore-HackED2019/initialize
+    
+    Express scaffold
+
+[33mcommit 61b225dbec6905d241578b4a7c4ba6a4257f4f2b[m[33m ([m[1;31morigin/initialize[m[33m)[m
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 13:57:05 2019 -0700
+
+    Express scaffold
+
+[33mcommit 1c2fb05640e4c98356def62e18006c7b973f9b61[m
+Merge: af0da91 16df88c
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 13:48:04 2019 -0700
+
+    Merge pull request #1 from BrainStore-HackED2019/initialize
+    
+    Initialize
+
+[33mcommit 16df88cf9bb709505cc61ac3413fcd9cae9b417c[m
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 13:47:23 2019 -0700
+
+    Added more dependencies
+
+[33mcommit 9445cd3e825469b6b052efdd97778ec3d3403664[m
+Author: David Herczeg <david.herczeg@live.ca>
+Date:   Sat Jan 19 13:41:04 2019 -0700
+
+    Initialize
+
+[33mcommit af0da9146cc81cf882f34d92fa8ecb8cd67f5178[m[33m ([m[1;31morigin/db[m[33m)[m
+Author: Henry <wjxhenry@gmail.com>
+Date:   Sat Jan 19 13:19:26 2019 -0700
+
+    Initial commit
