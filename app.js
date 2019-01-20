@@ -4,6 +4,10 @@ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/database');
+const ideas = require('./routes/ideas');
+
+// Port Number
+const port = process.env.PORT || 3000;
 
 mongoose.connect(config.database, { useNewUrlParser: true });
 mongoose.connection.on('connected', () => {
@@ -15,29 +19,20 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
-// const users = require('./routes/users');
-
-// Port Number
-const port = process.env.PORT || 3000;
-
 // CORS Middleware
 app.use(cors());
 
 // Set Static Folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'frontend/src')));
 
 // Body Parser Middleware
 // app.use(bodyParser.json());
 
-// app.use('/users', users);
+app.use('/ideas', ideas);
 
 // Index Route
 app.get('/', (req, res) => {
   res.send('invaild endpoint');
-});
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 // Start Server
