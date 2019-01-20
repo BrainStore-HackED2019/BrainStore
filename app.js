@@ -1,41 +1,46 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const path = require('path');
+// const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const config = require('./config/database');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+mongoose.connect(config.database, { useNewUrlParser: true });
+mongoose.connection.on('connected', () => {
+  console.log('Connected to Database ' + config.database);
+});
+mongoose.connection.on('error', (err) => {
+  console.log('Database error ' + err);
+});
 
-var app = express();
+const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// const users = require('./routes/users');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+// Port Number
+const port = process.env.PORT || 3000;
+
+// CORS Middleware
+app.use(cors());
+
+// Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Body Parser Middleware
+// app.use(bodyParser.json());
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
+// app.use('/users', users);
+
+// Index Route
+app.get('/', (req, res) => {
+  res.send('invaild endpoint');
 });
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-module.exports = app;
+// Start Server
+app.listen(port, () => {
+  console.log('Server started on port ' + port);
+});
