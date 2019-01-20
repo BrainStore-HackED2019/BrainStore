@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Idea } from '../idea';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Idea } from '../idea';
 
 @Component({
   selector: 'app-idea-form',
@@ -11,13 +12,17 @@ export class IdeaFormComponent implements OnInit {
 
   constructor(private http : HttpClient) { }
 
-  idea = new Idea("New idea");
-
-  submitted = false;
+  newPost: Observable<any>;
 
   onSubmit() {
-    this.submitted = true;
 
+    var ideaName = (<HTMLInputElement> document.getElementById("IdeaName")).value;
+    var description = (<HTMLInputElement> document.getElementById("Description")).value;
+
+    let idea = new Idea(ideaName, description);
+
+    this.newPost = this.http.post('http://localhost:3000/ideas/send', idea);
+    console.log("Submitted.");
   }
 
   ngOnInit() {

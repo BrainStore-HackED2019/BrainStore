@@ -1,6 +1,7 @@
 export class Idea {
 
     constructor( 
-        public idea_details? : string
+        public title : string,
+        public description : string
     ) {}
 }
