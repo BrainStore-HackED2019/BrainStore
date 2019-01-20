@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>Enter an Idea</h3>
+  <form (ngSubmit)="onSubmit()" #ideaForm="ngForm">
+    <div class="form-group">
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!ideaForm.form.valid">Submit</button>
+
+  </form>
+</div>
