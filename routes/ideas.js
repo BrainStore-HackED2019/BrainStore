@@ -10,8 +10,8 @@ router.get('/test', (req, res, next) => {
 
 router.post('/send', (req, res, next) => {
   let newIdea = new Idea({
-    idea: 'Idea 1',
-    description: 'From David'
+    idea: req.body.title,
+    description: req.body.description
   });
 
   Idea.addIdea(newIdea, (err, idea) => {

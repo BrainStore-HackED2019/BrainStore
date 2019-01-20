@@ -1,11 +1,25 @@
 <div class="container">
-  <h3>Enter an Idea</h3>
-  <form (ngSubmit)="onSubmit()" #ideaForm="ngForm">
+    <h3>Enter an Idea</h3>
+    <form (ngSubmit)="onSubmit()" #ideaForm="ngForm">
     <div class="form-group">
-      <input type="text" class="form-control" id="name" required>
+      <label for="IdeaName">Idea Name</label>
+      <input type="ideaName" class="form-control" id="IdeaName" placeholder="Enter Idea Name" required>
     </div>
+    <div class="form-group">
+      <label for="Topic">Topic</label>
+      <input type="topic" class="form-control" id="Topic" placeholder="Enter Topic" required>
+    </div>
+    <div class="form-group">
+      <label for="Description">Description</label>
+      <textarea rows="5" type="decsription" class="form-control" id="Description" placeholder="Enter Description Here" required></textarea>
+    </div>
+      <button type="submit" class="btn btn-success" [disabled]="!ideaForm.form.valid">Submit</button>
 
-    <button type="submit" class="btn btn-success" [disabled]="!ideaForm.form.valid">Submit</button>
 
-  </form>
+      <div hidden>
+          {{ newPost | async | json }}
+      </div>
+      
+   
+    </form>
 </div>

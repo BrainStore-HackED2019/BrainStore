@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/database');
@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'frontend/src')));
 
 // Body Parser Middleware
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 app.use('/ideas', ideas);
 
