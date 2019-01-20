@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>Enter an Idea</h3>
+    <h3 *ngIf="randomTopic">{{ randomTopic | async | json }}</h3>
     <form (ngSubmit)="onSubmit()" #ideaForm="ngForm">
     <div class="form-group">
       <label for="IdeaName">Idea Name</label>

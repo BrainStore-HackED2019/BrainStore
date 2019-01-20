@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Idea } from '../idea';
+import { Topic } from './Topic';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-idea-form',
@@ -14,6 +16,7 @@ export class IdeaFormComponent implements OnInit {
 
   newPost: Observable<any>;
   topics: Observable<any>;
+  randomTopic: Observable<any>; 
 
   onSubmit() {
 
@@ -34,7 +37,9 @@ export class IdeaFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.randomTopic = { topic: "loading" };
 
+    this.randomTopic = this.http.get<Topic>('http://localhost:3000/topics/random').pipe(map(x => x.topic));
   }
 
 }

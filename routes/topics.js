@@ -34,6 +34,7 @@ router.get('/random', (req, res, next) => {
       res.json(topic);
     });
   });
+  console.log('Hello')
 });
 
 router.get('/list', (req, res, next) => {
