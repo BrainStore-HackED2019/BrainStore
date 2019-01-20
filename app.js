@@ -5,9 +5,12 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 const ideas = require('./routes/ideas');
+const topics = require('./routes/topics');
 
 // Port Number
 const port = process.env.PORT || 3000;
+
+const app = express();
 
 mongoose.connect(config.database, { useNewUrlParser: true });
 mongoose.connection.on('connected', () => {
@@ -16,8 +19,6 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('error', (err) => {
   console.log('Database error ' + err);
 });
-
-const app = express();
 
 // CORS Middleware
 app.use(cors());
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'frontend/src')));
 app.use(bodyParser.json());
 
 app.use('/ideas', ideas);
+app.use('/topics', topics)
 
 // Index Route
 app.get('/', (req, res) => {
