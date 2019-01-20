@@ -1,0 +1,16 @@
+/*.nav-item{
+	color:white;
+}*/
+
+
+/*.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+:host /deep/ li {
+  color:white;
+}*/
