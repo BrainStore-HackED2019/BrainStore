@@ -15,6 +15,11 @@
     </div>
       <button type="submit" class="btn btn-success" [disabled]="!ideaForm.form.valid">Submit</button>
 
+      <button (click)="getTopics()">Get Topics</button>
+
+      <div *ngFor="let topic of topics | async">
+        {{ topic.topic | json }}
+      </div>
 
       <div hidden>
           {{ newPost | async | json }}

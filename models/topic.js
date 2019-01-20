@@ -18,18 +18,7 @@ module.exports.getTopicById = () => {
 };
 
 module.exports.queryRandomTopic = () => {
-  Topic.count({}, (err, count) => {
-    if (err) return err;
 
-    console.log('Count: ', count);
-    const random = Math.floor(Math.random() * count);
-
-    Topic.findOne().skip(random).exec((err, topic) => {
-      if (err) return err;
-
-      console.log('Random topic: ', topic);
-    });
-  });
 };
 
 // topic is a Topic object

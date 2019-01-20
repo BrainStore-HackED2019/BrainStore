@@ -13,6 +13,7 @@ export class IdeaFormComponent implements OnInit {
   constructor(private http : HttpClient) { }
 
   newPost: Observable<any>;
+  topics: Observable<any>;
 
   onSubmit() {
 
@@ -25,7 +26,15 @@ export class IdeaFormComponent implements OnInit {
     console.log("Submitted.");
   }
 
+  getTopics() {
+    console.log('Clicked');
+    this.topics = this.http.get('http://localhost:3000/topics/list');
+    console.log(this.topics);
+    
+  }
+
   ngOnInit() {
+
   }
 
 }
